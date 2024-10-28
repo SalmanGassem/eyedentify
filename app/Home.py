@@ -70,7 +70,7 @@ if uploaded_file is not None:
                     status.update(label="Prediction complete!", state="complete", expanded=False)
 
                 if 'loaded_model' not in st.session_state:  # Check if model is already loaded
-                    loaded_model = tf.keras.models.load_model("app/model/Eyedentify_1.0.h5")
+                    loaded_model = tf.keras.models.load_model("app/savedmodel/Eyedentify_1.0.h5")
                     st.session_state['loaded_model'] = loaded_model
                 else:
                     loaded_model = st.session_state['loaded_model']
