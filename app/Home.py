@@ -16,7 +16,7 @@ st.set_page_config(
 logo_style = """
     <style>
     [data-testid="stSidebar"] .block-container {
-        padding-top: 80px;  /* Adjust this value to control the space above the sidebar content */
+        padding-top: 200px;  /* Adjust this value to control the space above the sidebar content */
     }
     </style>
     """
