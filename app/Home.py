@@ -12,6 +12,15 @@ st.set_page_config(
     page_icon=":eye:"
     ) 
 
+logo_style = """
+    <style>
+    [data-testid="stSidebar"] .block-container {
+        padding-top: 80px;  /* Adjust this value to control the space above the sidebar content */
+    }
+    </style>
+    """
+st.markdown(logo_style, unsafe_allow_html=True)
+
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
