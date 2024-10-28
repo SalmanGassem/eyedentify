@@ -10,3 +10,6 @@ In this prototype of what this project can achieve, it checks the tyre condition
 
 ## How to use
 Please upload an image of a tyre and let the magic happen!
+
+### Sample images
+![Alt Text](sample/sample.png)
