@@ -15,7 +15,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-add_logo("app/logo4.png")
+# add_logo("app/logo4.png")
 
 with st.sidebar:
     st.image("app/logo4.png", use_column_width=True)
