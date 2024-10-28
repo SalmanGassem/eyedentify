@@ -15,7 +15,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-add_logo("app\logo4.png")
+add_logo("app/logo4.png")
 
 with st.sidebar:
       st.caption("By Salman Gassem © 2024")
@@ -262,7 +262,7 @@ plt.title('Training and Validation Loss')
 plt.show()'''
     with st.expander("Expand Code"):
         st.code(code, line_numbers=True, language='python')
-        image = Image.open("app\perplot.png")
+        image = Image.open("app/perplot.png")
         st.image(image, use_column_width=True)
 
 with tab3:

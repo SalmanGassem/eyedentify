@@ -14,7 +14,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-add_logo("app\logo4.png")
+add_logo("app/logo4.png")
 
 with st.sidebar:
       st.caption("By Salman Gassem © 2024")
@@ -22,7 +22,7 @@ with st.sidebar:
 with st.container():
     
     
-    st.image("app\log_mid_border.png", use_column_width=True)
+    st.image("app/log_mid_border.png", use_column_width=True)
 
     st.header("About Eyedentify")
     st.write("Eyedentify is a project aimed at utilizing image classification techniques to address practical and meaningful challenges in various domains starting with industrial components quality control.")
