@@ -7,3 +7,6 @@ Eyedentify is a project aimed at utilizing image classification techniques to ad
 
 ## Usecase
 In this prototype of what this project can achieve, it checks the tyre conditions and classifies the tyre based on whether it is defective or not.
+
+## How to use
+Please upload an image of a tyre and let the magic happen!
