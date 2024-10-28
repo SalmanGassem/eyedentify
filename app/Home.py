@@ -21,8 +21,8 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 with st.sidebar:
-      add_logo("app/logo4.png")
-      st.caption("By Salman Gassem © 2024")
+    add_logo("app/logo4.png")
+    st.caption("By Salman Gassem © 2024")
 
 st.title(":eye: Eyedentify")
 
