@@ -22,6 +22,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 with st.sidebar:
+    st.image("app/logo4.png", use_column_width=True)
     st.caption("By Salman Gassem © 2024")
 
 # add_logo("app/logo4.png")
