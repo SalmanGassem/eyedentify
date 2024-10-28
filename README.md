@@ -1,5 +1,7 @@
 # Eyedentify
 
+Welcome to my Computer Science Graduation project!
+
 ### Link to the app: https://eyedentify.streamlit.app/
 ### Demo video: https://www.canva.com/design/DAGF8-JTMR0/MQcJPzlXYoyBRFzFJaK1eg/watch?utm_content=DAGF8-JTMR0&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
