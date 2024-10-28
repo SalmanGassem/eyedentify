@@ -9,39 +9,22 @@ from streamlit_extras.app_logo import add_logo
 
 st.set_page_config(
     page_title="Eyedentify", 
-    page_icon=":eye:",
-    layout="wide"
+    page_icon=":eye:"
     ) 
 
-# Hide Streamlit default footer and menu
 hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
-"""
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Custom CSS to add spacing between the logo and the rest of the sidebar
-logo_spacing_style = """
-    <style>
-    [data-testid="stSidebar"] > div:first-child {
-        margin-top: -20px; /* You can adjust this value for spacing between the top and the logo */
-    }
+add_logo("app/logo4.png")
 
-    [data-testid="stSidebar"] img {
-        margin-bottom: 30px;  /* Adjust this value for space between the logo and the menu items */
-    }
-    </style>
-"""
-st.markdown(logo_spacing_style, unsafe_allow_html=True)
-
-# Sidebar section
 with st.sidebar:
-    add_logo("app/logo4.png")  # Ensure the logo is at the top
     st.caption("By Salman Gassem © 2024")
 
-# Main page content
 st.title(":eye: Eyedentify")
 
 st.markdown("### Is your tyre ok?\n #### Find out by uploading an image of your tyre! :point_down:")
@@ -56,8 +39,8 @@ if uploaded_file is not None:
     file_type = uploaded_file.type.lower().split("/")[-1]
     if file_type not in supported_types:
         with st.status("Receiving image...", expanded=True) as status:
-            st.write("Checking image type...")
-            time.sleep(0.5)
+                st.write("Checking image type...")
+                time.sleep(0.5)
         st.error(f"Unsupported file type '{file_type}'. Please upload JPG, JPEG, or PNG.")
     else:
         if uploaded_file:
@@ -74,6 +57,7 @@ if uploaded_file is not None:
 
             # Model
             if uploaded_file is not None:
+
                 st.header('Prediction:')
 
                 with st.status("Sending image to model...", expanded=True) as status:
@@ -97,7 +81,7 @@ if uploaded_file is not None:
                     image = image.convert("RGB")
                     resize = tf.image.resize(image, (256, 256))
 
-                yhat = loaded_model.predict(np.expand_dims(resize / 255, 0))
+                yhat = loaded_model.predict(np.expand_dims(resize/255, 0))
 
                 st.divider()
 
@@ -110,3 +94,4 @@ if uploaded_file is not None:
                     st.success('Tyre condition: Good')
 
                 st.image(image, caption="Uploaded Image", use_column_width=True)
+
