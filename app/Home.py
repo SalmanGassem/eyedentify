@@ -12,16 +12,6 @@ st.set_page_config(
     page_icon=":eye:"
     ) 
 
-# CSS to add margin between the logo and the rest of the sidebar
-logo_style = """
-    <style>
-    [data-testid="stSidebar"] .block-container {
-        padding-top: 80px;  /* Adjust this value to control the space above the sidebar content */
-    }
-    </style>
-    """
-st.markdown(logo_style, unsafe_allow_html=True)
-
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -30,12 +20,11 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Sidebar section
+add_logo("app/logo4.png")
+
 with st.sidebar:
-    add_logo("app/logo4.png")  # Ensure the logo is at the top
     st.caption("By Salman Gassem © 2024")
 
-# Main page content
 st.title(":eye: Eyedentify")
 
 st.markdown("### Is your tyre ok?\n #### Find out by uploading an image of your tyre! :point_down:")
@@ -105,3 +94,4 @@ if uploaded_file is not None:
                     st.success('Tyre condition: Good')
 
                 st.image(image, caption="Uploaded Image", use_column_width=True)
+
