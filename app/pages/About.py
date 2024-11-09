@@ -26,7 +26,7 @@ with st.container():
     st.image("app/log_mid_border.png", use_column_width=True)
 
     st.header("About Eyedentify")
-    st.write("Eyedentify is a project aimed at utilizing image classification techniques to address practical and meaningful challenges in various domains starting with industrial components quality control.")
+    st.write("Eyedentify is a project aimed at utilizing a Deep learning image classification model to address practical and meaningful challenges in various domains starting with industrial components quality control.")
     
     st.subheader("Why Eyedentify is the future")
     st.write("- Potential to revolutionize the way we solve problems.\n- Recognize and categorize objects, patterns, or features in images.\n- Automated disease diagnosis, object recognition in autonomous vehicles, and even facial recognition for security systems.\n- Machine learning algorithms and approaches that demonstrate accuracy and efficiency.")
